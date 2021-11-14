@@ -1,0 +1,19 @@
+Inclusion de librerias
+
+#include <stdio.h> //estandar input output
+
+#include <stdlib.h> // coversion, memoria, control de procesos
+- malloc, free, atoi, rand, srand, exit, system
+
+#include <math.h> // operaciones matematicas basicas
+-pow, sin, cos, sqrt, exp, ceil, floor
+
+Inclusion de macros
+
+#define pi 3.14 // declara una macro
+
+#define saludo "hola como estas" // un mensaje
+
+#define max (A,B) ((A)>(B)?(A):(B)) // una funcion
+
+#define tipo_entero int // redefinimos el tipo int
