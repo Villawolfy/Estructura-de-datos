@@ -37,4 +37,14 @@ Desarrollado en el departamento de Ingerniería Eléctrica de la Universidad de 
    * Los datos se guardan en un archivo "datos.txt"
    * Manejo de archivos para estadisticas de los planes contratados
    * Las estadisticas se guardan en un archivo "estadisticas.txt"
-   * Version terminada y declarada como estable
+
+### [13/11/2021]
+#### v1.3b:
+   * Se añade un estructura cliente para guardar los datos de los clientes de forma más optimizada para el programa
+   * Se añade una estructura nodo y otra lista
+   * Creación de una lista para los clientes
+   * Se inserta a los clientes en la lista
+   * Se agrega la función suprimir al cliente que elige no contratar un plan
+   * Creación de la función imprime lista
+   * Modificación makefile
+   * VERSION TERMINADA Y DECLARADA COMO ESTABLE

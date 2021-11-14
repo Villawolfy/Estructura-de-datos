@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include "funciones.h" 
+#include "TDA-Lista-v2/lista.h"
 
 // Variables auxiliares
 int Planes=0; //Cantidad de planes disponibles
@@ -64,7 +65,7 @@ Planes = inicio();
   menu(&opcionElegir);
 
   // Elección plan
-  eleccion(&opcionElegir);
+  eleccion(&opcionElegir, lista);
   
 
   }
@@ -73,7 +74,9 @@ Planes = inicio();
 printf("No quedan mas planes telefonicos disponibles para la venta.\n\n");
 estadistica(); //Muestra las estadisticas de los planes contratados.
 
-imprime(lista);
+
+// Función para el moderador
+mostrarClientes(lista); //Muestra la lista de clientes.
 
 return 0;
 }

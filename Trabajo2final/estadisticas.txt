@@ -1,0 +1,91 @@
+******************************
+Estadísticas:
+******************************
+La cantidad de clientes en contratar algun plan o no es de: 1 clientes.
+
+porcentajes de contratacion de cada opcion:
+             %
+Plan 1       0.00
+Plan 2       0.00
+Plan 3       0.00
+Ningun plan  100.00
+
+El Plan 3 es el plan mas vendido.
+******************************
+Estadísticas:
+******************************
+La cantidad de clientes en contratar algun plan o no es de: 1 clientes.
+
+porcentajes de contratacion de cada opcion:
+             %
+Plan 1       0.00
+Plan 2       100.00
+Plan 3       0.00
+Ningun plan  0.00
+
+El Plan 2 es el plan mas vendido.
+******************************
+Estadísticas:
+******************************
+La cantidad de clientes en contratar algun plan o no es de: 1 clientes.
+
+porcentajes de contratacion de cada opcion:
+             %
+Plan 1       100.00
+Plan 2       0.00
+Plan 3       0.00
+Ningun plan  0.00
+
+El Plan 1 es el plan mas vendido.
+******************************
+Estadísticas:
+******************************
+La cantidad de clientes en contratar algun plan o no es de: 2 clientes.
+
+porcentajes de contratacion de cada opcion:
+             %
+Plan 1       0.00
+Plan 2       50.00
+Plan 3       50.00
+Ningun plan  0.00
+
+El Plan 3 es el plan mas vendido.
+******************************
+Estadísticas:
+******************************
+La cantidad de clientes en contratar algun plan o no es de: 2 clientes.
+
+porcentajes de contratacion de cada opcion:
+             %
+Plan 1       0.00
+Plan 2       100.00
+Plan 3       0.00
+Ningun plan  0.00
+
+El Plan 2 es el plan mas vendido.
+******************************
+Estadísticas:
+******************************
+La cantidad de clientes en contratar algun plan o no es de: 1 clientes.
+
+porcentajes de contratacion de cada opcion:
+             %
+Plan 1       100.00
+Plan 2       0.00
+Plan 3       0.00
+Ningun plan  0.00
+
+El Plan 1 es el plan mas vendido.
+******************************
+Estadísticas:
+******************************
+La cantidad de clientes en contratar algun plan o no es de: 2 clientes.
+
+porcentajes de contratacion de cada opcion:
+             %
+Plan 1       0.00
+Plan 2       50.00
+Plan 3       0.00
+Ningun plan  50.00
+
+El Plan 2 es el plan mas vendido.

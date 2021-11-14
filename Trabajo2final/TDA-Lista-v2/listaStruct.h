@@ -1,8 +1,6 @@
 #ifndef LISTA_STRUCT_H
 #define LISTA_STRUCT_H
 
-#define tipoDato int
-
 struct cliente{
     char nombre[30];
     char apellido[30];
@@ -14,6 +12,7 @@ struct cliente{
 
 #define tipoDato cliente
 
+/* Estructuras*/
 struct nodo{
 	tipoDato dato;
 	struct nodo* next;
@@ -33,5 +32,5 @@ struct Lista{
 	}
 };
 
-
 #endif
+

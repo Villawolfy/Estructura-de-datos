@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "lista.h"
+#include <string.h>
 
 bool vacia(Lista lista){
 	return fin(lista)==primero(lista);
@@ -42,9 +43,10 @@ void inserta(tipoDato x, int p, Lista &lista){
 }
 
 void imprime(Lista lista){
+	printf("Clientes que contrataron un plan el dia de hoy:\n\n");
 	for(int i=primero(lista);i<fin(lista);i=siguiente(i,lista)){
 		tipoDato x = recupera(i,lista);
-		printf("[%d,%d]->",i,x);
+		printf("[%d, %s %s %s]\n", i, x.nombre, x.apellido, x.celular);
 	}
 	printf("\n");
 }
@@ -57,7 +59,7 @@ void anula(Lista &lista){
 
 int localiza(tipoDato x, Lista lista){
 	for(int i=primero(lista);i<fin(lista);i=siguiente(i,lista))
-		if(recupera(i,lista)==x)
+		if((strcmp(recupera(i,lista).nombre, x.nombre) ==0) && (strcmp(recupera(i,lista).apellido, x.apellido) ==0))
 			return i;
 	return fin(lista);
 }
@@ -82,3 +84,4 @@ void suprime(int p, Lista &lista){
 	aux->next = NULL;
 	delete aux;
 }
+

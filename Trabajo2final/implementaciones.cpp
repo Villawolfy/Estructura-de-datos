@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "funciones.h"
+#include "TDA-Lista-v2/lista.h"
+
 
 // Variables para estadisticas 
 float Plan1=0;
@@ -9,6 +11,10 @@ float ningunPlan=0;
 
 
 // Variables de almacenamiento
+int plan1;
+char plan2;
+char plan3;
+char ningunplan;
 
 // Variables auxiliares
 int planes=0; //Cantidad de planes disponibles.
@@ -112,9 +118,8 @@ fprintf(registrar, "|");
   
   
   printf("Ahora con la completacion de sus datos ya puede seguir con el proceso\n\n");
-  fprintf(registrar, "\n\n");
   fclose(registrar);
-
+  
   inserta(nuevoCliente, fin(lista), lista); // Se inserta el nuevo cliente en el final de la lista.
 }
 
@@ -157,7 +162,7 @@ void menu(int* opcionElegir){
 
 }
  
-void eleccion(int* opcionElegir){
+void eleccion(int* opcionElegir, Lista& lista){
 /*
   * Nombre de la función: eleccion.
   * Tipo de función: void.
@@ -167,26 +172,45 @@ void eleccion(int* opcionElegir){
   * el que se decidio, se muestra por pantalla agradecimientos por la compañia y por último
   * al elegir un plan este suma una contratación que servira para las estadisticas finales.
   */
+
+ registrar = fopen("datos.txt", "a+");
     switch(*opcionElegir){
         case 1: printf("Usted contrato el plan 1.\nEn menos de 24 horas su plan ya estara cargado al numero telefonico que ingreso en sus datos.\n");
                 printf("Muchas gracias por la contratacion de nuestros servicios, que tenga una excelente semana y disfrute nuestro plan.\n\n");
+                fprintf(registrar, "plan 1");
+                fprintf(registrar, "|");
+                fprintf(registrar, "\n\n");
+                fclose(registrar);
                 Plan1= Plan1 + 1;
                 break;
         case 2: printf("Usted contrato el plan 2.\nEn menos de 24 horas su plan ya estara cargado al numero telefonico que ingreso en sus datos.\n");
                 printf("Muchas gracias por la contratacion de nuestros servicios, que tenga una excelente semana y disfrute nuestro plan.\n\n");
+                fprintf(registrar, "plan 2");
+                fprintf(registrar, "|");
+                fprintf(registrar, "\n\n");
+                fclose(registrar);
                 Plan2= Plan2 + 1;
                 break;
         case 3: printf("Usted contrato el plan 3.\nEn menos de 24 horas su plan ya estara cargado al numero telefonico que ingreso en sus datos.\n");
                 printf("Muchas gracias por la contratacion de nuestros servicios, que tenga una excelente semana y disfrute nuestro plan.\n\n");
+                fprintf(registrar, "plan 3");
+                fprintf(registrar, "|");
+                fprintf(registrar, "\n\n");
+                fclose(registrar);
                 Plan3= Plan3 + 1;
                 break;    
         case 4: printf("Usted no contrato ningun plan.\n");
                 printf("Esperamos que proximamente decida contratar algun plan, que tenga una excelenta semana.\n\n");
+                fprintf(registrar, "ningun plan");
+                fprintf(registrar, "|");
+                fprintf(registrar, "\n\n");
+                fclose(registrar);
                 ningunPlan= ningunPlan + 1;
-                suprime(cliente, lista);
+                suprime(anterior(fin(lista), lista), lista);
                 
                 break;           
         default: printf("El usuario ingreso una opcion que no es valida.\n\n\n");
+              
               
     }
   
@@ -237,13 +261,13 @@ void estadistica(){
   fprintf(registrar, "Ningun plan  %.2f\n\n", ningunPlan);
 
   if ((Plan1 > Plan2) && (Plan1 > Plan3)){
-        printf("El Plan 1 es el plan mas vendido.\n");
+        printf("El Plan 1 es el plan mas vendido.\n\n");
         fprintf(registrar, "El Plan 1 es el plan mas vendido.\n");
   } else if((Plan2 > Plan1) && (Plan2 > Plan3)){
-        printf("El Plan 2 es el plan mas vendido.\n");
+        printf("El Plan 2 es el plan mas vendido.\n\n");
         fprintf(registrar, "El Plan 2 es el plan mas vendido.\n");
   } else{  
-        printf("El Plan 3 es el plan mas vendido.\n");
+        printf("El Plan 3 es el plan mas vendido.\n\n");
         fprintf(registrar, "El Plan 3 es el plan mas vendido.\n");
   }
   
@@ -253,3 +277,24 @@ void estadistica(){
 
 
 }
+
+
+
+ 
+
+
+void mostrarClientes(Lista lista){
+
+printf("***********************\n");
+printf("Solo para el moderador:\n");
+printf("***********************\n\n");
+
+
+imprime(lista);
+
+
+}
+
+
+
+
